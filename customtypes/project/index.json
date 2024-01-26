@@ -44,6 +44,14 @@
             }
           }
         }
+      },
+      "link": {
+        "type": "Link",
+        "config": {
+          "label": "Link",
+          "placeholder": "",
+          "select": null
+        }
       }
     },
     "SEO & Metadata": {

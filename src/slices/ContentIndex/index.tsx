@@ -17,12 +17,11 @@ const ContentIndex = async ({
   slice,
 }: ContentIndexProps): Promise<JSX.Element> => {
   const client = createClient();
-  const blogPosts = await client.getAllByType("blog_post");
   const projects = await client.getAllByType("project");
 
-  const contentType = slice.primary.content_type || "Blog";
+  const contentType = slice.primary.content_type;
 
-  const items = contentType === "Blog" ? blogPosts : projects;
+  const items = projects;
 
   return (
     <Bounded
@@ -42,6 +41,7 @@ const ContentIndex = async ({
         contentType={contentType}
         viewMoreText={slice.primary.view_more_text}
         fallbackItemImage={slice.primary.fallback_item_image}
+        Link={slice.primary.link}
       />
     </Bounded>
   );

@@ -10,16 +10,18 @@ import { Content } from "@prismicio/client";
 gsap.registerPlugin(ScrollTrigger);
 
 type ContentListProps = {
-  items: Content.BlogPostDocument[] | Content.ProjectDocument[];
+  items: Content.ProjectDocument[];
   contentType: Content.ContentIndexSlice["primary"]["content_type"];
   fallbackItemImage: Content.ContentIndexSlice["primary"]["fallback_item_image"];
   viewMoreText: Content.ContentIndexSlice["primary"]["view_more_text"];
+  Link: Content.ContentIndexSlice["primary"]["link"];
 };
 
 export default function ContentList({
   items,
   contentType,
   fallbackItemImage,
+  Link,
   viewMoreText = "Read More",
 }: ContentListProps) {
   const component = useRef(null);
@@ -139,7 +141,7 @@ export default function ContentList({
         className="grid border-b border-b-slate-100"
         onMouseLeave={onMouseLeave}
       >
-        {items.map((post, index) => (
+        {items.map((item, index) => (
           <li
             key={index}
             ref={(el) => (itemsRef.current[index] = el)}
@@ -147,14 +149,14 @@ export default function ContentList({
             className="opacity-0 list-item"
           >
             <a
-              href={`${urlPrefix}/${post.uid}`}
+              href="https://jalalseidi.github.io/manage-web/"
               className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row "
-              aria-label={post.data.title || ""}
+              aria-label={item.data.title || ""}
             >
               <div className="flex flex-col">
-                <span className="text-3xl font-bold">{post.data.title}</span>
+                <span className="text-3xl font-bold">{item.data.title}</span>
                 <div className="flex gap-3 text-yellow-400">
-                  {post.tags.map((tag, index) => (
+                  {item.tags.map((tag, index) => (
                     <span key={index} className="text-lg font-bold">
                       {tag}
                     </span>
