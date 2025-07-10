@@ -1,0 +1,12 @@
+[
+  { "tech_name": "Python", "tech_color": "#306998" },
+  { "tech_name": "Django", "tech_color": "#092e20" },
+  { "tech_name": "Node.js", "tech_color": "#339933" },
+  { "tech_name": "TypeScript", "tech_color": "#3178c6" },
+  { "tech_name": "Vue.js", "tech_color": "#4fc08d" },
+  { "tech_name": "PostgreSQL", "tech_color": "#336791" },
+  { "tech_name": "MongoDB", "tech_color": "#47a248" },
+  { "tech_name": "Docker", "tech_color": "#2496ed" },
+  { "tech_name": "AWS", "tech_color": "#ff9900" },
+  { "tech_name": "GraphQL", "tech_color": "#e10098" }
+]

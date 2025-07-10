@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Bounded from "@/components/Bounded";
 import Heading from "@/components/Heading";
+import additionalTechs from "@/data/technologies.json";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,6 +22,11 @@ export type TechListProps = SliceComponentProps<Content.TechListSlice>;
  * Component for "TechList" Slices.
  */
 const TechList = ({ slice }: TechListProps): JSX.Element => {
+  // Combine Prismic technologies with additional ones, removing duplicates
+  const combinedTechs = [...slice.items, ...additionalTechs];
+  const allTechnologies = combinedTechs.filter((tech, index, self) => 
+    index === self.findIndex(t => t.tech_name === tech.tech_name)
+  );
   const component = useRef(null);
 
   useLayoutEffect(() => {
@@ -68,9 +74,12 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
         <Heading size="xl" className="mb-8" as="h2">
           {slice.primary.heading}
         </Heading>
+        <div className="prose prose-xl prose-invert mb-8">
+          <p>I specialize in modern web technologies and frameworks:</p>
+        </div>
       </Bounded>
 
-      {slice.items.map(({ tech_color, tech_name }, index) => (
+      {allTechnologies.map(({ tech_color, tech_name }, index) => (
         <div
           key={index}
           className="tech-row mb-8 flex items-center justify-center gap-4 text-slate-700"

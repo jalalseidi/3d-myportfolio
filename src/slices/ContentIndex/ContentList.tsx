@@ -112,11 +112,21 @@ export default function ContentList({
     setHovering(false);
     setCurrentItem(null);
   };
-
   const contentImages = items.map((item) => {
+    // Check if this is a Prismic item or additional project
+    if (item.data.hover_image && typeof item.data.hover_image === 'object' && 'url' in item.data.hover_image) {
+      // For additional projects with simple URL structure
+      return item.data.hover_image.url;
+    }
+    
     const image = isFilled.image(item.data.hover_image)
       ? item.data.hover_image
       : fallbackItemImage;
+      
+    if (!image) {
+return '/project-images/placeholder.svg'; // Fallback image
+    }
+    
     return asImageSrc(image, {
       fit: "crop",
       w: 220,
@@ -149,7 +159,8 @@ export default function ContentList({
             className="opacity-0 list-item"
           >
             <a
-              href="https://jalalseidi.github.io/manage-web/"
+              href={item.data.link?.url || '#'}
+              target={item.data.link?.target || '_self'}
               className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row "
               aria-label={item.data.title || ""}
             >

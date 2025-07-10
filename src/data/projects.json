@@ -1,0 +1,162 @@
+[
+  {
+    "uid": "task-management-app",
+    "data": {
+      "title": "Task Management App",
+      "date": "2024-01-15",
+      "hover_image": {
+        "url": "/project-images/task-management.jpg",
+        "alt": "Task Management App Screenshot"
+      },
+      "link": {
+        "url": "/projects/task-management",
+        "target": "_self"
+      },
+      "description": "A full-stack task management application built with React, Node.js, and MongoDB. Features include real-time updates, user authentication, and drag-and-drop functionality.",
+      "technologies": ["React", "Node.js", "MongoDB", "Socket.io", "JWT"],
+      "meta_title": "Task Management App - Project",
+      "meta_description": "Full-stack task management application with real-time updates"
+    },
+    "tags": ["React", "Node.js", "MongoDB"]
+  },
+  {
+    "uid": "e-commerce-platform",
+    "data": {
+      "title": "E-Commerce Platform",
+      "date": "2023-11-20",
+      "hover_image": {
+        "url": "/project-images/ecommerce.jpg",
+        "alt": "E-Commerce Platform Screenshot"
+      },
+      "link": {
+        "url": "/projects/ecommerce",
+        "target": "_self"
+      },
+      "description": "A complete e-commerce solution with product catalog, shopping cart, payment processing, and admin dashboard. Built with Next.js and Stripe integration.",
+      "technologies": ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind CSS"],
+      "meta_title": "E-Commerce Platform - Project",
+      "meta_description": "Full-featured e-commerce platform with payment processing"
+    },
+    "tags": ["Next.js", "TypeScript", "Stripe"]
+  },
+  {
+    "uid": "weather-dashboard",
+    "data": {
+      "title": "Weather Dashboard",
+      "date": "2023-09-10",
+      "hover_image": {
+        "url": "/project-images/weather-dashboard.jpg",
+        "alt": "Weather Dashboard Screenshot"
+      },
+      "link": {
+        "url": "/projects/weather-dashboard",
+        "target": "_self"
+      },
+      "description": "An interactive weather dashboard with real-time weather data, forecasts, and location-based services. Responsive design with beautiful data visualizations.",
+      "technologies": ["Vue.js", "Chart.js", "OpenWeather API", "CSS3"],
+      "meta_title": "Weather Dashboard - Project",
+      "meta_description": "Interactive weather dashboard with real-time data and forecasts"
+    },
+    "tags": ["Vue.js", "API", "Charts"]
+  },
+  {
+    "uid": "blog-cms",
+    "data": {
+      "title": "Personal Blog CMS",
+      "date": "2023-07-25",
+      "hover_image": {
+        "url": "/project-images/blog-cms.jpg",
+        "alt": "Blog CMS Screenshot"
+      },
+      "link": {
+        "url": "/projects/blog-cms",
+        "target": "_self"
+      },
+      "description": "A content management system for personal blogging with markdown support, SEO optimization, and admin panel. Built with Python Django and React.",
+      "technologies": ["Python", "Django", "React", "PostgreSQL", "Markdown"],
+      "meta_title": "Personal Blog CMS - Project",
+      "meta_description": "Custom CMS for blogging with markdown support and SEO optimization"
+    },
+    "tags": ["Python", "Django", "React"]
+  },
+  {
+    "uid": "portfolio-website",
+    "data": {
+      "title": "Interactive Portfolio",
+      "date": "2023-12-05",
+      "hover_image": {
+        "url": "/project-images/portfolio.jpg",
+        "alt": "Portfolio Website Screenshot"
+      },
+      "link": {
+        "url": "/projects/portfolio",
+        "target": "_self"
+      },
+      "description": "A modern, responsive portfolio website with 3D animations, smooth transitions, and interactive elements. Built with Next.js and Three.js.",
+      "technologies": ["Next.js", "Three.js", "GSAP", "Tailwind CSS", "Prismic CMS"],
+      "meta_title": "Interactive Portfolio - Project",
+      "meta_description": "Modern portfolio website with 3D animations and interactive elements"
+    },
+    "tags": ["Next.js", "Three.js", "GSAP"]
+  },
+  {
+    "uid": "social-media-app",
+    "data": {
+      "title": "Social Media App",
+      "date": "2023-10-30",
+      "hover_image": {
+        "url": "/project-images/social-media.jpg",
+        "alt": "Social Media App Screenshot"
+      },
+      "link": {
+        "url": "/projects/social-media",
+        "target": "_self"
+      },
+      "description": "A full-stack social media application with real-time messaging, post sharing, and user authentication. Mobile-responsive design with PWA capabilities.",
+      "technologies": ["React Native", "Firebase", "Node.js", "Express", "Socket.io"],
+      "meta_title": "Social Media App - Project",
+      "meta_description": "Full-stack social media application with real-time messaging"
+    },
+    "tags": ["React Native", "Firebase", "Node.js"]
+  },
+  {
+    "uid": "booker-barber",
+    "data": {
+      "title": "BookerBarber",
+      "date": "2024-03-15",
+      "hover_image": {
+        "url": "/project-images/booker-barber.jpg",
+        "alt": "BookerBarber App Screenshot"
+      },
+      "link": {
+        "url": "/projects/booker-barber",
+        "target": "_self"
+      },
+      "description": "A comprehensive booking system for barbershops built with the MERN stack. Allows customers to book appointments and barbers to manage their schedules efficiently.",
+      "technologies": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+      "meta_title": "BookerBarber - Project",
+      "meta_description": "MERN stack barbershop booking system with appointment management"
+    },
+    "tags": ["React", "Node.js", "MongoDB"]
+  },
+  {
+    "uid": "coding-generator-fastapi",
+    "data": {
+      "title": "Code Challenge Generator",
+      "date": "2024-05-20",
+      "hover_image": {
+        "url": "/project-images/coding-generator.jpg",
+        "alt": "CodingGenerator-FastApi Screenshot"
+      },
+      "link": {
+        "url": "/projects/coding-generator-fastapi",
+        "target": "_self"
+      },
+      "description": "An AI-powered coding challenge generator built with FastAPI and machine learning. Creates personalized programming problems and solutions for developers to practice and improve their skills.",
+      "technologies": ["Python", "FastAPI", "AI/ML", "OpenAI API", "PostgreSQL"],
+      "meta_title": "Code Challenge Generator - Project",
+      "meta_description": "AI-powered coding challenge generator using FastAPI and machine learning"
+    },
+    "tags": ["Python", "FastAPI", "AI/ML"]
+  }
+]

@@ -4,6 +4,7 @@ import { Content, isFilled } from "@prismicio/client";
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react";
 import ContentList from "./ContentList";
 import { createClient } from "@/prismicio";
+import additionalProjects from "@/data/projects.json";
 
 /**
  * Props for `ContentIndex`.
@@ -21,7 +22,8 @@ const ContentIndex = async ({
 
   const contentType = slice.primary.content_type;
 
-  const items = projects;
+  // Combine Prismic projects with additional projects
+  const items = [...projects, ...additionalProjects];
 
   return (
     <Bounded

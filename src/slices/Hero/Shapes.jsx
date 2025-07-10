@@ -1,7 +1,7 @@
 "use client";
 
 import * as THREE from "three";
-import { Canvas} from "@react-three/fiber";
+import { Canvas, useLoader } from "@react-three/fiber";
 import { ContactShadows, Float, Environment } from "@react-three/drei";
 import { Suspense, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
@@ -33,31 +33,51 @@ export function Shapes() {
   }
 
   function Geometries() {
+    const textures = {
+      react: useLoader(THREE.TextureLoader, '/logos/react.svg'),
+      javascript: useLoader(THREE.TextureLoader, '/logos/javascript.svg'),
+      python: useLoader(THREE.TextureLoader, '/logos/python.svg'),
+      django: useLoader(THREE.TextureLoader, '/logos/django.svg'),
+      nodejs: useLoader(THREE.TextureLoader, '/logos/nodejs.svg'),
+      typescript: useLoader(THREE.TextureLoader, '/logos/typescript.svg')
+    };
+
     const geometries = [
       {
         position: [0, 0, 0],
         r: 0.3,
-        geometry: new THREE.IcosahedronGeometry(3), // Gem
+        geometry: new THREE.BoxGeometry(2.5, 2.5, 0.3),
+        texture: textures.react
       },
       {
         position: [1, -0.75, 4],
         r: 0.4,
-        geometry: new THREE.CapsuleGeometry(0.5, 1.6, 2, 16), // Pill
+        geometry: new THREE.BoxGeometry(2.5, 2.5, 0.3),
+        texture: textures.javascript
       },
       {
         position: [-1.4, 2, -4],
         r: 0.6,
-        geometry: new THREE.DodecahedronGeometry(1.5), // Soccer ball
+        geometry: new THREE.BoxGeometry(2.5, 2.5, 0.3),
+        texture: textures.nodejs
       },
       {
         position: [-0.8, -0.75, 5],
         r: 0.5,
-        geometry: new THREE.TorusGeometry(0.6, 0.25, 16, 32), // Donut
+        geometry: new THREE.BoxGeometry(2.5, 2.5, 0.3),
+        texture: textures.python
       },
       {
         position: [1.6, 1.6, -4],
         r: 0.7,
-        geometry: new THREE.OctahedronGeometry(1.5), // Diamond
+        geometry: new THREE.BoxGeometry(2.5, 2.5, 0.3),
+        texture: textures.typescript
+      },
+      {
+        position: [0.5, 1.5, 2],
+        r: 0.4,
+        geometry: new THREE.BoxGeometry(2.5, 2.5, 0.3),
+        texture: textures.django
       },
     ];
   
@@ -70,98 +90,31 @@ export function Shapes() {
     ];
   
     const materials = [
-      new THREE.MeshNormalMaterial(),
-      new THREE.MeshStandardMaterial({ color: 0x2ecc71, roughness: 0 }),
-      new THREE.MeshStandardMaterial({ color: 0xf1c40f, roughness: 0.4 }),
-      new THREE.MeshStandardMaterial({ color: 0xe74c3c, roughness: 0.1 }),
-      new THREE.MeshStandardMaterial({ color: 0x8e44ad, roughness: 0.1 }),
-      new THREE.MeshStandardMaterial({ color: 0x1abc9c, roughness: 0.1 }),
+      new THREE.MeshStandardMaterial({ color: 0x61dafb, roughness: 0.2, metalness: 0.1 }), // React Blue
+      new THREE.MeshStandardMaterial({ color: 0xdd0031, roughness: 0.3, metalness: 0.2 }), // Angular Red
+      new THREE.MeshStandardMaterial({ color: 0x68a063, roughness: 0.1, metalness: 0.3 }), // Node.js Green
+      new THREE.MeshStandardMaterial({ color: 0xf7df1e, roughness: 0.4, metalness: 0.1 }), // JavaScript Yellow
+      new THREE.MeshStandardMaterial({ color: 0x3178c6, roughness: 0.2, metalness: 0.2 }), // TypeScript Blue
+      new THREE.MeshStandardMaterial({ color: 0x4fc08d, roughness: 0.1, metalness: 0.1 }), // Vue.js Green
       new THREE.MeshStandardMaterial({
-        roughness: 0,
-        metalness: 0.5,
-        color: 0x2980b9,
+        roughness: 0.1,
+        metalness: 0.3,
+        color: 0x306998, // Python Blue
       }),
       new THREE.MeshStandardMaterial({
-        color: 0x2c3e50,
-        roughness: 0.1,
-        metalness: 0.5,
+        color: 0xff6b35, // Git Orange
+        roughness: 0.2,
+        metalness: 0.1,
       }),
     ];
   
-    return geometries.map(({ position, r, geometry }) => (
-      <Geometry
-        key={JSON.stringify(position)} // Unique key
-        position={position.map((p) => p * 2)}
-        geometry={geometry}
-        soundEffects={soundEffects}
-        materials={materials}
-        r={r}
-      />
-    ));
-  }
-  
-  function Geometry({ r, position, geometry, soundEffects, materials }) {
-    const meshRef = useRef();
-    const [visible, setVisible] = useState(false);
-  
-    const startingMaterial = getRandomMaterial();
-  
-    function getRandomMaterial() {
-      return gsap.utils.random(materials);
-    }
-  
-    function handleClick(e) {
-      const mesh = e.object;
-  
-      gsap.utils.random(soundEffects).play();
-  
-      gsap.to(mesh.rotation, {
-        x: `+=${gsap.utils.random(0, 2)}`,
-        y: `+=${gsap.utils.random(0, 2)}`,
-        z: `+=${gsap.utils.random(0, 2)}`,
-        duration: 1.3,
-        ease: "elastic.out(1,0.3)",
-        yoyo: true,
-      });
-  
-      mesh.material = getRandomMaterial();
-    }
-  
-    const handlePointerOver = () => {
-      document.body.style.cursor = "pointer";
-    };
-  
-    const handlePointerOut = () => {
-      document.body.style.cursor = "default";
-    };
-  
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        setVisible(true);
-        gsap.from(meshRef.current.scale, {
-          x: 0,
-          y: 0,
-          z: 0,
-          duration: gsap.utils.random(0.8, 1.2),
-          ease: "elastic.out(1,0.3)",
-          delay: gsap.utils.random(0, 0.5),
-        });
-      });
-      return () => ctx.revert();
-    }, []);
-  
-    return (
-      <group position={position} ref={meshRef}>
+    return geometries.map(({ position, r, geometry, texture }) => (
+      <group position={position.map((p) => p * 2)} key={JSON.stringify(position)}>
         <Float speed={5 * r} rotationIntensity={6 * r} floatIntensity={5 * r}>
-          <mesh
-            geometry={geometry}
-            onClick={handleClick}
-            onPointerOver={handlePointerOver}
-            onPointerOut={handlePointerOut}
-            visible={visible}
-            material={startingMaterial}
-          ></mesh>
+          <mesh geometry={geometry}>
+            <meshBasicMaterial map={texture} transparent={true} />
+          </mesh>
         </Float>
       </group>
-    );
+    ));
   }

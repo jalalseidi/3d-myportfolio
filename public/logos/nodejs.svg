@@ -1,0 +1,8 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" fill="#339933"/>
+  <path d="M128 40L190 80v96L128 216L66 176V80L128 40z" fill="#6cc04a"/>
+  <path d="M128 40L190 80L128 120L66 80L128 40z" fill="#8cc84b"/>
+  <path d="M128 120v96L66 176V80L128 120z" fill="#5d9c3c"/>
+  <path d="M128 120v96L190 176V80L128 120z" fill="#76b247"/>
+  <text x="128" y="240" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="bold">Node.js</text>
+</svg>

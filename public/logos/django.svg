@@ -1,0 +1,5 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="256" height="256" rx="20" fill="#092e20"/>
+  <path d="M128 40c-20 0-36 16-36 36v104c0 20 16 36 36 36s36-16 36-36V76c0-20-16-36-36-36zm0 20c8.8 0 16 7.2 16 16v104c0 8.8-7.2 16-16 16s-16-7.2-16-16V76c0-8.8 7.2-16 16-16z" fill="#44b78b"/>
+  <text x="128" y="230" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="20" font-weight="bold">DJANGO</text>
+</svg>
