@@ -9,6 +9,9 @@
     "lint": "next lint",
     "slicemachine": "start-slicemachine"
   },
+  "engines": {
+    "node": "24.x"
+  },
   "dependencies": {
     "@prismicio/client": "^7.3.1",
     "@prismicio/next": "^1.5.0",
