@@ -52,7 +52,7 @@ export default function BookerBarber() {
         
         <div className="flex gap-4 mb-8">
           <a 
-            href="https://github.com/jalalseidi/booker-barber" 
+            href="https://github.com/jalalseidi/BarberBooker1" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center bg-slate-800 hover:bg-slate-700 px-6 py-3 rounded-lg transition-colors"
@@ -61,7 +61,7 @@ export default function BookerBarber() {
             View Code
           </a>
           <a 
-            href="https://booker-barber-app.com" 
+            href="https://barber-booker1.vercel.app" 
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors"

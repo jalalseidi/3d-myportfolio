@@ -41,7 +41,7 @@ export default function WeatherDashboard() {
           <div className="bg-slate-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4 text-yellow-400">Technologies Used</h3>
             <div className="flex flex-wrap gap-2">
-              {['Next.js', 'TypeScript', 'Tailwind CSS', 'OpenWeather API', 'Lucide Icons'].map((tech) => (
+              {['Vue.js', 'Chart.js', 'OpenWeather API', 'CSS3', 'Lucide Icons'].map((tech) => (
                 <span key={tech} className="bg-blue-600 px-3 py-1 rounded-full text-sm">
                   {tech}
                 </span>
@@ -52,7 +52,7 @@ export default function WeatherDashboard() {
         
         <div className="flex gap-4 mb-8">
           <a 
-            href="https://github.com/yourusername/weather-dashboard" 
+            href="https://github.com/jalalseidi/weather-dashboard" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center bg-slate-800 hover:bg-slate-700 px-6 py-3 rounded-lg transition-colors"
@@ -61,11 +61,12 @@ export default function WeatherDashboard() {
             View Code
           </a>
           <a 
-            href="/projects/weather-dashboard/demo" 
-            className="flex items-center bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors"
+            href="#" 
+            className="flex items-center bg-slate-600 px-6 py-3 rounded-lg cursor-not-allowed opacity-60"
+            title="Demo coming soon - currently in deployment"
           >
             <ExternalLink className="mr-2" size={20} />
-            Live Demo
+            Live Demo (Coming Soon)
           </a>
         </div>
         
@@ -78,10 +79,11 @@ export default function WeatherDashboard() {
               real-time data from the OpenWeather API and presents it in an easy-to-read format.
             </p>
             <p>
-              Built with Next.js and TypeScript, the application features a beautiful 
+              Built with Vue.js, the application features a beautiful 
               gradient background with glassmorphism effects that create a modern, 
-              professional appearance. The responsive design ensures optimal viewing 
-              across all device sizes.
+              professional appearance. Chart.js provides interactive data visualizations 
+              for temperature and humidity trends. The responsive design ensures optimal 
+              viewing across all device sizes.
             </p>
             <p>
               The search functionality allows users to quickly find weather information 

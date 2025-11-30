@@ -149,13 +149,11 @@ return '/project-images/placeholder.svg'; // Fallback image
       <ul
         ref={component}
         className="grid border-b border-b-slate-100"
-        onMouseLeave={onMouseLeave}
       >
         {items.map((item, index) => (
           <li
             key={index}
             ref={(el) => (itemsRef.current[index] = el)}
-            onMouseEnter={() => onMouseEnter(index)}
             className="opacity-0 list-item"
           >
             <a
@@ -181,15 +179,7 @@ return '/project-images/placeholder.svg'; // Fallback image
           </li>
         ))}
 
-        {/* Hover element */}
-        <div
-          className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[220px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
-          style={{
-            backgroundImage:
-              currentItem !== null ? `url(${contentImages[currentItem]})` : "",
-          }}
-          ref={revealRef}
-        ></div>
+        {/* Hover element - disabled */}
       </ul>
     </>
   );

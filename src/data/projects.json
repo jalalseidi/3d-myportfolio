@@ -5,19 +5,19 @@
       "title": "Task Management App",
       "date": "2024-01-15",
       "hover_image": {
-        "url": "/project-images/task-management.jpg",
+        "url": "/project-images/placeholder.svg",
         "alt": "Task Management App Screenshot"
       },
       "link": {
         "url": "/projects/task-management",
         "target": "_self"
       },
-      "description": "A full-stack task management application built with React, Node.js, and MongoDB. Features include real-time updates, user authentication, and drag-and-drop functionality.",
-      "technologies": ["React", "Node.js", "MongoDB", "Socket.io", "JWT"],
+      "description": "A full-stack task management application built with React, TypeScript, Node.js, and MongoDB. Features include real-time updates, user authentication, and drag-and-drop functionality.",
+      "technologies": ["React", "TypeScript", "Node.js", "MongoDB", "Socket.io"],
       "meta_title": "Task Management App - Project",
       "meta_description": "Full-stack task management application with real-time updates"
     },
-    "tags": ["React", "Node.js", "MongoDB"]
+    "tags": ["React", "TypeScript", "MongoDB"]
   },
   {
     "uid": "e-commerce-platform",
@@ -25,7 +25,7 @@
       "title": "E-Commerce Platform",
       "date": "2023-11-20",
       "hover_image": {
-        "url": "/project-images/ecommerce.jpg",
+        "url": "/project-images/placeholder.svg",
         "alt": "E-Commerce Platform Screenshot"
       },
       "link": {
@@ -45,25 +45,25 @@
       "title": "Weather Dashboard",
       "date": "2023-09-10",
       "hover_image": {
-        "url": "/project-images/weather-dashboard.jpg",
+        "url": "/project-images/placeholder.svg",
         "alt": "Weather Dashboard Screenshot"
       },
       "link": {
         "url": "/projects/weather-dashboard",
         "target": "_self"
       },
-      "description": "An interactive weather dashboard with real-time weather data, forecasts, and location-based services. Responsive design with beautiful data visualizations.",
+      "description": "An interactive weather dashboard with real-time weather data, forecasts, and location-based services. Built with Vue.js and Chart.js for beautiful data visualizations.",
       "technologies": ["Vue.js", "Chart.js", "OpenWeather API", "CSS3"],
       "meta_title": "Weather Dashboard - Project",
       "meta_description": "Interactive weather dashboard with real-time data and forecasts"
     },
-    "tags": ["Vue.js", "API", "Charts"]
+    "tags": ["Vue.js", "Chart.js", "API"]
   },
   {
     "uid": "blog-cms",
     "data": {
-      "title": "Personal Blog CMS",
-      "date": "2023-07-25",
+      "title": "Blog CMS",
+      "date": "2025-11-28",
       "hover_image": {
         "url": "/project-images/blog-cms.jpg",
         "alt": "Blog CMS Screenshot"
@@ -72,12 +72,12 @@
         "url": "/projects/blog-cms",
         "target": "_self"
       },
-      "description": "A content management system for personal blogging with markdown support, SEO optimization, and admin panel. Built with Python Django and React.",
-      "technologies": ["Python", "Django", "React", "PostgreSQL", "Markdown"],
-      "meta_title": "Personal Blog CMS - Project",
-      "meta_description": "Custom CMS for blogging with markdown support and SEO optimization"
+      "description": "A modern, minimalistic Blog CMS built with Django REST Framework and React + TypeScript. Features include user authentication, account management, markdown support, categories & tags, and a clean black & white design.",
+      "technologies": ["Django", "React", "TypeScript", "PostgreSQL", "Tailwind CSS"],
+      "meta_title": "Blog CMS - Project",
+      "meta_description": "Modern minimalistic Blog CMS with Django REST Framework and React"
     },
-    "tags": ["Python", "Django", "React"]
+    "tags": ["Django", "React", "TypeScript"]
   },
   {
     "uid": "portfolio-website",
@@ -125,7 +125,7 @@
       "title": "BookerBarber",
       "date": "2024-03-15",
       "hover_image": {
-        "url": "/project-images/booker-barber.jpg",
+        "url": "/project-images/placeholder.svg",
         "alt": "BookerBarber App Screenshot"
       },
       "link": {
@@ -145,7 +145,7 @@
       "title": "Code Challenge Generator",
       "date": "2024-05-20",
       "hover_image": {
-        "url": "/project-images/coding-generator.jpg",
+        "url": "/project-images/placeholder.svg",
         "alt": "CodingGenerator-FastApi Screenshot"
       },
       "link": {

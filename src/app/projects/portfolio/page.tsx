@@ -52,13 +52,13 @@ export default function InteractivePortfolio() {
         
         <div className="flex gap-4 mb-8">
           <a 
-            href="https://github.com/yourusername/portfolio" 
+            href="https://github.com/jalalseidi/3d-myportfolio" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center bg-slate-800 hover:bg-slate-700 px-6 py-3 rounded-lg transition-colors"
           >
             <Github className="mr-2" size={20} />
-            View Code
+            View Code on GitHub
           </a>
           <a 
             href="/" 

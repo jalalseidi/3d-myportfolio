@@ -52,20 +52,20 @@ export default function SocialMediaApp() {
         
         <div className="flex gap-4 mb-8">
           <a 
-            href="https://github.com/yourusername/social-media-app" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center bg-slate-800 hover:bg-slate-700 px-6 py-3 rounded-lg transition-colors"
+            href="#" 
+            className="flex items-center bg-slate-600 px-6 py-3 rounded-lg cursor-not-allowed opacity-60"
+            title="Project in development - code coming soon"
           >
             <Github className="mr-2" size={20} />
-            View Code
+            Code Coming Soon
           </a>
           <a 
-            href="/projects/social-media/demo" 
-            className="flex items-center bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg transition-colors"
+            href="#" 
+            className="flex items-center bg-slate-600 px-6 py-3 rounded-lg cursor-not-allowed opacity-60"
+            title="Demo coming soon - currently in development"
           >
             <ExternalLink className="mr-2" size={20} />
-            Live Demo
+            Live Demo (Coming Soon)
           </a>
         </div>
         
