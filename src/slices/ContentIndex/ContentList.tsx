@@ -158,7 +158,7 @@ return '/project-images/placeholder.svg'; // Fallback image
           >
             <a
               href={asLink(item.data.link) || '#'}
-              target={isFilled.link(item.data.link) && item.data.link.target ? item.data.link.target : '_self'}
+              target={isFilled.link(item.data.link) && item.data.link.link_type === 'Web' && 'target' in item.data.link ? item.data.link.target : '_self'}
               className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row "
               aria-label={item.data.title || ""}
             >
