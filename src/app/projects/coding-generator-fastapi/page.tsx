@@ -76,7 +76,7 @@ export default function CodeChallengeGenerator() {
             <p>
               The Code Challenge Generator leverages artificial intelligence to create unique, 
               personalized coding challenges for developers of all skill levels. Built with 
-              FastAPI for high-performance API endpoints, the system integrates with OpenAI's 
+              FastAPI for high-performance API endpoints, the system integrates with OpenAI&apos;s 
               powerful language models to generate contextually relevant programming problems.
             </p>
             <p>
