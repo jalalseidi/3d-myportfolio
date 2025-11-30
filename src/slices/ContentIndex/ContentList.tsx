@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import { asImageSrc, isFilled } from "@prismicio/client";
+import { asImageSrc, isFilled, asLink } from "@prismicio/client";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MdArrowOutward } from "react-icons/md";
@@ -157,8 +157,8 @@ return '/project-images/placeholder.svg'; // Fallback image
             className="opacity-0 list-item"
           >
             <a
-              href={item.data.link?.url || '#'}
-              target={item.data.link?.target || '_self'}
+              href={asLink(item.data.link) || '#'}
+              target={isFilled.link(item.data.link) && item.data.link.target ? item.data.link.target : '_self'}
               className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row "
               aria-label={item.data.title || ""}
             >
