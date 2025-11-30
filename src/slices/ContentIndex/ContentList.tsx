@@ -9,8 +9,23 @@ import { Content } from "@prismicio/client";
 
 gsap.registerPlugin(ScrollTrigger);
 
+type AdditionalProject = {
+  uid: string;
+  data: {
+    title: string;
+    date: string;
+    hover_image: { url: string; alt: string };
+    link: { url: string; target: string };
+    description: string;
+    technologies: string[];
+    meta_title: string;
+    meta_description: string;
+  };
+  tags: string[];
+};
+
 type ContentListProps = {
-  items: Content.ProjectDocument[];
+  items: (Content.ProjectDocument | AdditionalProject)[];
   contentType: Content.ContentIndexSlice["primary"]["content_type"];
   fallbackItemImage: Content.ContentIndexSlice["primary"]["fallback_item_image"];
   viewMoreText: Content.ContentIndexSlice["primary"]["view_more_text"];
@@ -33,6 +48,25 @@ export default function ContentList({
   const lastMousePos = useRef({ x: 0, y: 0 });
 
   const urlPrefix = contentType === "Blog" ? "/blog" : "/project";
+
+  // Helper to get link URL from either Prismic or JSON format
+  const getLinkUrl = (link: any): string => {
+    if (link && typeof link === 'object' && 'url' in link && typeof link.url === 'string') {
+      return link.url;
+    }
+    return asLink(link) || '#';
+  };
+
+  // Helper to get link target from either Prismic or JSON format
+  const getLinkTarget = (link: any): string => {
+    if (link && typeof link === 'object' && 'target' in link && typeof link.target === 'string') {
+      return link.target;
+    }
+    if (isFilled.link(link) && link.link_type === 'Web' && 'target' in link) {
+      return link.target || '_self';
+    }
+    return '_self';
+  };
 
   useEffect(() => {
     // Animate list-items in with a stagger
@@ -157,8 +191,8 @@ return '/project-images/placeholder.svg'; // Fallback image
             className="opacity-0 list-item"
           >
             <a
-              href={asLink(item.data.link) || '#'}
-              target={isFilled.link(item.data.link) && item.data.link.link_type === 'Web' && 'target' in item.data.link ? item.data.link.target : '_self'}
+              href={getLinkUrl(item.data.link)}
+              target={getLinkTarget(item.data.link)}
               className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row "
               aria-label={item.data.title || ""}
             >
